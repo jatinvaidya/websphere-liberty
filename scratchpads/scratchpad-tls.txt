@@ -1,0 +1,122 @@
+https://www.ibm.com/docs/en/was-liberty/base?topic=liberty-adding-trusted-certificates-in
+
+ $echo q | openssl s_client -showcerts -connect jv-aia.au.auth0.com:443
+CONNECTED(00000006)
+depth=2 C = IE, O = Baltimore, OU = CyberTrust, CN = Baltimore CyberTrust Root
+verify return:1
+depth=1 C = US, O = "Cloudflare, Inc.", CN = Cloudflare Inc ECC CA-3
+verify return:1
+depth=0 C = US, ST = CA, L = San Francisco, O = "Cloudflare, Inc.", CN = au.auth0.com
+verify return:1
+---
+Certificate chain
+ 0 s:/C=US/ST=CA/L=San Francisco/O=Cloudflare, Inc./CN=au.auth0.com
+   i:/C=US/O=Cloudflare, Inc./CN=Cloudflare Inc ECC CA-3
+-----BEGIN CERTIFICATE-----
+MIIE2TCCBH+gAwIBAgIQAuamG8VP+azSslMKzSqkjzAKBggqhkjOPQQDAjBKMQsw
+CQYDVQQGEwJVUzEZMBcGA1UEChMQQ2xvdWRmbGFyZSwgSW5jLjEgMB4GA1UEAxMX
+Q2xvdWRmbGFyZSBJbmMgRUNDIENBLTMwHhcNMjAxMDIyMDAwMDAwWhcNMjExMDIx
+MjM1OTU5WjBkMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDVNh
+biBGcmFuY2lzY28xGTAXBgNVBAoTEENsb3VkZmxhcmUsIEluYy4xFTATBgNVBAMT
+DGF1LmF1dGgwLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABA0yAY/dXPFW
+3RQ0SiVlpymuPpD01JWW5/Nj5I9gCkwMJzAXqMD8FdJ6OcI6JFkQgZz3Ic0VXMHu
+UbdFGbM7/tSjggMrMIIDJzAfBgNVHSMEGDAWgBSlzjfq67B1DpRniLRF+tkkEIeW
+HzAdBgNVHQ4EFgQUZ5Gx3LKFkLAsbnb7+hkuJEWb+q0wXQYDVR0RBFYwVIIMYXUu
+YXV0aDAuY29tghcqLmd1YXJkaWFuLmF1LmF1dGgwLmNvbYIbKi5lZGdlLnRlbmFu
+dHMuYXUuYXV0aDAuY29tgg4qLmF1LmF1dGgwLmNvbTAOBgNVHQ8BAf8EBAMCB4Aw
+HQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHsGA1UdHwR0MHIwN6A1oDOG
+MWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9DbG91ZGZsYXJlSW5jRUNDQ0EtMy5j
+cmwwN6A1oDOGMWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9DbG91ZGZsYXJlSW5j
+RUNDQ0EtMy5jcmwwTAYDVR0gBEUwQzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcC
+ARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAIBgZngQwBAgIwdgYIKwYB
+BQUHAQEEajBoMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20w
+QAYIKwYBBQUHMAKGNGh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9DbG91ZGZs
+YXJlSW5jRUNDQ0EtMy5jcnQwDAYDVR0TAQH/BAIwADCCAQQGCisGAQQB1nkCBAIE
+gfUEgfIA8AB2APZclC/RdzAiFFQYCDCUVo7jTRMZM7/fDC8gC8xO8WTjAAABdVFE
+vb4AAAQDAEcwRQIgP1JTG8wXlQOY6KHpZS4JhaznDrPgCZj6z0UQ+Y62HtACIQDO
+z2xTKo6N2Jyumk4ApeALfLimivIzz4Q7K3oMkdy45QB2AFzcQ5L+5qtFRLFemtRW
+5hA3+9X6R9yhc5SyXub2xw7KAAABdVFEvgcAAAQDAEcwRQIhALG1X2c5Bt3B4ks0
+wZR1oD4ZIDw5K8z6YZx/rB9JuM6qAiAO9ZeGiCIT0wNM+5OAS2IVw3azlc+vT270
++iiNgPcwvzAKBggqhkjOPQQDAgNIADBFAiEAwIE1CWyWVQjedV2x5+oBJ2s73QfA
+ClwIvy/w+I2YGD8CIGjU8MJ7ewoRmOk1eno4sDd3lWfYo0LyyzuHQDLa8qpt
+-----END CERTIFICATE-----
+ 1 s:/C=US/O=Cloudflare, Inc./CN=Cloudflare Inc ECC CA-3
+   i:/C=IE/O=Baltimore/OU=CyberTrust/CN=Baltimore CyberTrust Root
+-----BEGIN CERTIFICATE-----
+MIIDzTCCArWgAwIBAgIQCjeHZF5ftIwiTv0b7RQMPDANBgkqhkiG9w0BAQsFADBa
+MQswCQYDVQQGEwJJRTESMBAGA1UEChMJQmFsdGltb3JlMRMwEQYDVQQLEwpDeWJl
+clRydXN0MSIwIAYDVQQDExlCYWx0aW1vcmUgQ3liZXJUcnVzdCBSb290MB4XDTIw
+MDEyNzEyNDgwOFoXDTI0MTIzMTIzNTk1OVowSjELMAkGA1UEBhMCVVMxGTAXBgNV
+BAoTEENsb3VkZmxhcmUsIEluYy4xIDAeBgNVBAMTF0Nsb3VkZmxhcmUgSW5jIEVD
+QyBDQS0zMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEua1NZpkUC0bsH4HRKlAe
+nQMVLzQSfS2WuIg4m4Vfj7+7Te9hRsTJc9QkT+DuHM5ss1FxL2ruTAUJd9NyYqSb
+16OCAWgwggFkMB0GA1UdDgQWBBSlzjfq67B1DpRniLRF+tkkEIeWHzAfBgNVHSME
+GDAWgBTlnVkwgkdYzKz6CFQ2hns6tQRN8DAOBgNVHQ8BAf8EBAMCAYYwHQYDVR0l
+BBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBIGA1UdEwEB/wQIMAYBAf8CAQAwNAYI
+KwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5j
+b20wOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL09t
+bmlyb290MjAyNS5jcmwwbQYDVR0gBGYwZDA3BglghkgBhv1sAQEwKjAoBggrBgEF
+BQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzALBglghkgBhv1sAQIw
+CAYGZ4EMAQIBMAgGBmeBDAECAjAIBgZngQwBAgMwDQYJKoZIhvcNAQELBQADggEB
+AAUkHd0bsCrrmNaF4zlNXmtXnYJX/OvoMaJXkGUFvhZEOFp3ArnPEELG4ZKk40Un
++ABHLGioVplTVI+tnkDB0A+21w0LOEhsUCxJkAZbZB2LzEgwLt4I4ptJIsCSDBFe
+lpKU1fwg3FZs5ZKTv3ocwDfjhUkV+ivhdDkYD7fa86JXWGBPzI6UAPxGezQxPk1H
+goE6y/SJXQ7vTQ1unBuCJN0yJV0ReFEQPaA1IwQvZW+cwdFD19Ae8zFnWSfda9J1
+CZMRJCQUzym+5iPDuI9yP+kHyCREU3qzuWFloUwOxkgAyXVjBYdwRVKD05WdRerw
+6DEdfgkfCv4+3ao8XnTSrLE=
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=/C=US/ST=CA/L=San Francisco/O=Cloudflare, Inc./CN=au.auth0.com
+issuer=/C=US/O=Cloudflare, Inc./CN=Cloudflare Inc ECC CA-3
+---
+No client certificate CA names sent
+Server Temp Key: ECDH, X25519, 253 bits
+---
+SSL handshake has read 2667 bytes and written 281 bytes
+---
+New, TLSv1/SSLv3, Cipher is ECDHE-ECDSA-CHACHA20-POLY1305
+Server public key is 256 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-ECDSA-CHACHA20-POLY1305
+    Session-ID: C2A89CD9EE7C4072E68832B8B3CF82257DCB1AA7C7CCA3880D43E8CA86CF8880
+    Session-ID-ctx:
+    Master-Key: C5C54571088EFA1CBA2611590BC269CABD6B536B275BF183B411E0C9596264B58416C4C3F99BC593D0301E40484E08C6
+    TLS session ticket lifetime hint: 64800 (seconds)
+    TLS session ticket:
+    0000 - 72 f7 ad 5b 54 b8 65 bf-cd 6f 88 24 9e ed 1a 5e   r..[T.e..o.$...^
+    0010 - d7 26 c8 a6 1e 98 2e 4d-2b 6d 16 6e 32 98 2f 79   .&.....M+m.n2./y
+    0020 - ba 5c 02 ab af 0f f7 0b-8f 29 97 66 f3 d7 71 4c   .\.......).f..qL
+    0030 - a4 3d c8 cd d0 6e 00 50-f2 0c ff ce b8 c5 90 4f   .=...n.P.......O
+    0040 - 12 f4 02 10 27 68 13 55-ca 5c 70 0a 1f 6e 6b 27   ....'h.U.\p..nk'
+    0050 - 1d d9 c9 92 da bc 17 77-db 05 6f 8b f4 59 fd e0   .......w..o..Y..
+    0060 - 58 13 86 69 53 32 cb 02-4a ed 75 81 f0 cd 17 7e   X..iS2..J.u....~
+    0070 - 19 b1 bf 5c 7f fd 8e d8-23 b1 b3 07 08 19 e3 28   ...\....#......(
+    0080 - 00 76 ea 6a 2e ef 92 ff-7d 9b 9d 09 7d 0d 21 36   .v.j....}...}.!6
+    0090 - 83 3a 44 20 a5 8d 92 e1-ab 37 75 16 6e 8d 5c 8e   .:D .....7u.n.\.
+    00a0 - b8 b7 98 b7 a0 d7 7b 9a-a5 7a 66 b6 42 00 76 31   ......{..zf.B.v1
+
+    Start Time: 1627691347
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+---
+DONE
+
+
+keytool -importcert \
+     -file /tmp/auth0-tls.cer \
+     -alias auth0-tls \
+     -keystore /opt/ibm/wlp/output/defaultServer/resources/security/key.p12 \
+     -storepass Mju76yhn \
+     -storetype PKCS12 \
+     -noprompt
+
+
+RUN keytool -importcert -file /tmp/auth0-tls.cer -alias auth0-tls -keystore /opt/ibm/wlp/output/defaultServer/resources/security/key.p12 -storepass Mju76yhn -storetype PKCS12 -noprompt
+
+

@@ -1,0 +1,74 @@
+<featureManager>
+    <feature>jdbc-4.1</feature>
+    <feature>jndi-1.0</feature>
+    <feature>ldapRegistry-3.0</feature>
+    <feature>appSecurity-2.0</feature>
+    <feature>localConnector-1.0</feature>
+    <feature>servlet-3.1</feature>
+    <feature>openidConnectClient-1.0</feature>
+    <feature>adminCenter-1.0</feature>
+    <feature>webCacheMonitor-1.0</feature>
+    <feature>jaxrs-1.1</feature>
+</featureManager>
+
+<keyStore id="defaultKeyStore" password="xxxxxxx"/>
+
+<httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
+
+<openidConnectClient authFilterRef="applicationFilter"
+                     authorizationEndpointUrl="https://xxxxxxxxxxx/authorize" 
+                     clientId="xxxxxxxx"
+                     clientSecret="xxxxxxxxxx" 
+                     createSession="false" 
+                     disableLtpaCookie="false" 
+                     grantType="authorization_code" 
+                     httpsRequired="true" 
+                     id="sso_liberty" 
+                     issuerIdentifier="https://xxxxxxxx" 
+                     responseType="code" 
+                     scope="openid" 
+                     signatureAlgorithm="RS256" 
+                     tokenEndpointAuthMethod="post" 
+                     tokenEndpointUrl="https://xxxxxxxxxxxx/token" 
+                     trustAliasName="application_sso" 
+                     trustStoreRef="defaultKeyStore" 
+                     userIdentityToCreateSubject="sub">
+</openidConnectClient>
+
+<ltpa expiration="100h" 
+        keysFileName="${server.output.dir}/resources/security/ltpa_new.keys" 
+        keysPassword="xxxxx"/>
+<authCache timeout="100h"/>
+
+<applicationMonitor updateTrigger="mbean"/>
+
+
+<ldapRegistry baseDN="O=xxxxxx.COM" 
+                host="xxxxx.xxxxx.com" 
+                id="LDAP" 
+                ignoreCase="true" 
+                ldapType="IBM Tivoli Directory Server" 
+                port="xxxxx" 
+                realm="xxxxxxxxx" 
+                searchTimeout="8m">
+    <idsFilters groupFilter="xxxxxx" 
+                    groupIdMap="xxxx"  
+                    groupMemberIdMap="xxxxx" 
+                    userFilter="xxxxx" 
+                    userIdMap="xxxxx">
+    </idsFilters>
+</ldapRegistry>
+
+<authFilter id="applicationFilter">
+    <webApp id="application.angular" matchType="contains" name="application.angular"/>
+    <requestUrl matchType="notContain" urlPattern="/api/icalfeed"/>
+</authFilter>
+
+<webApplication id="application.angular" location="application.angular.war" name="application.angular">
+    <classloader apiTypeVisibility="spec, ibm-api, third-party"  />
+    <application-bnd>
+        <security-role name="All Role">
+            <special-subject type="ALL_AUTHENTICATED_USERS" />
+        </security-role>
+    </application-bnd>
+</webApplication>
