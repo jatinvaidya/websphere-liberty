@@ -12,11 +12,9 @@
     </featureManager>
 
     <openidConnectClient id="oidcBridge" clientId="8iaBJqUvplclnF4dRzViY5nHpZ6rkWOD"
-        clientSecret="VLKxgVgK4wjMrQmMF4lmcQxOguiT71SNCv_b24WFOJpj68V4a0gmhXLRZCacUXz9"
-        discoveryEndpointUrl="https://jv-aia.au.auth0.com/.well-known/openid-configuration" 
-        signatureAlgorithm="RS256" 
-        jwkEndpointUrl="https://jv-aia.au.auth0.com/.well-known/jwks.json" 
-        disableLtpaCookie="false">
+        clientSecret="x"
+        discoveryEndpointUrl="https://jv-aia.au.auth0.com/.well-known/openid-configuration" signatureAlgorithm="RS256"
+        jwkEndpointUrl="https://jv-aia.au.auth0.com/.well-known/jwks.json" disableLtpaCookie="false">
     </openidConnectClient>
 
     <basicRegistry id="basic">
@@ -39,8 +37,9 @@
 
     <!-- Automatically expand WAR files and EAR files -->
     <applicationManager autoExpand="true" />
-    <keyStore id="defaultKeyStore" password="Mju76yhn" location="${server.config.dir}/jv.p12" type="PKCS12"/>
+    <keyStore id="defaultKeyStore" password="Mju76yhn" location="${server.config.dir}/jv-trust.p12" type="PKCS12" />
     <ltpa keysFileName="jv-ltpa.keys" keysPassword="Mju76yhn" expiration="1200" />
+
     <webAppSecurity singleSignonEnabled="true" ssoDomainNames=".app1.com" allowFailOverToBasicAuth="true"
         ssoRequiresSSL="false" />
 
