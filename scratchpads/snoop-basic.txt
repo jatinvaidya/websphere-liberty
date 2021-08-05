@@ -1,0 +1,83 @@
+
+Snoop Servlet - Request/Client Information
+Requested URL:
+http://app1.com/snoop
+
+
+Servlet Name:
+Snoop Servlet
+
+
+Request Information:
+Request method	GET
+Request URI	/snoop
+Request protocol	HTTP/1.1
+Servlet path	/snoop
+Path info	<none>
+Path translated	<none>
+Character encoding	<none>
+Query string	<none>
+Content length	<none>
+Content type	<none>
+Server name	app1.com
+Server port	80
+Remote user	user1
+Remote address	172.17.0.1
+Remote host	172.17.0.1
+Remote port	61150
+Local address	172.17.0.2
+Local host	538394b06316
+Local port	9080
+Authorization scheme	BASIC
+Preferred Client Locale	en_US
+All Client Locales	en_US
+All Client Locales	en
+Context Path	
+User Principal	user1
+
+
+Request headers:
+Host	app1.com
+User-Agent	Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language	en-US,en;q=0.5
+Accept-Encoding	gzip, deflate
+Authorization	Basic dXNlcjE6dXNlcjE=
+Connection	keep-alive
+Cookie	LtpaToken2=QGMdq3ou3E5c9z70MP/Eb6C2vZrwuPf6YPEoteALyw+DR+WkjH264nNI9i5OzJQcy3U+CN2bzfxtb50fI9MaYTZ6Gh+zHPJGav8vihh27us7oxtuP65PhiuvCcUs62/Sr81UgCKr9Q6MMZ0YM0PBqW+CgEuUXAr4sCMOkUKIlj2qUrARx6/s3FSaMtxUr2hZZCAQBJDleG4ToUJjYnA9dA84lJe7GeDxefSrG0lPkmNn3KOdYdvQl4iTvZhNqAlTgnPSB5/z+hIkV2IMFqmJMk7ot7tcAgs0Mv56RS+oYUe6DWwxuFYQ8Xsddr5cj67r
+Upgrade-Insecure-Requests	1
+Cache-Control	max-age=0
+
+
+Client cookies
+LtpaToken2	QGMdq3ou3E5c9z70MP/Eb6C2vZrwuPf6YPEoteALyw+DR+WkjH264nNI9i5OzJQcy3U+CN2bzfxtb50fI9MaYTZ6Gh+zHPJGav8vihh27us7oxtuP65PhiuvCcUs62/Sr81UgCKr9Q6MMZ0YM0PBqW+CgEuUXAr4sCMOkUKIlj2qUrARx6/s3FSaMtxUr2hZZCAQBJDleG4ToUJjYnA9dA84lJe7GeDxefSrG0lPkmNn3KOdYdvQl4iTvZhNqAlTgnPSB5/z+hIkV2IMFqmJMk7ot7tcAgs0Mv56RS+oYUe6DWwxuFYQ8Xsddr5cj67r
+
+
+Request attributes:
+com.ibm.websphere.servlet.uri_non_decoded	/snoop
+com.ibm.ws.security.tai.appAuthType	BASIC
+MPJwtTaiRequest	Micro Profile Jwt TaiRequest [provider:null request:com.ibm.ws.webcontainer40.srt.SRTServletRequest40@98a330e9]
+webRequestObject	com.ibm.ws.webcontainer.security.WebRequestImpl@c32d9390
+
+
+ServletContext attributes:
+javax.servlet.context.tempdir	/opt/ibm/wlp/output/defaultServer/workarea/org.eclipse.osgi/136/data/temp/default_node/SMF_WebContainer/DefaultApplication/DefaultWebApplication
+org.apache.myfaces.shared.config.MyfacesConfig	org.apache.myfaces.shared.config.MyfacesConfig@22df9e50
+com.ibm.ws.jsf.JSF_IMPL_ENABLED	None
+org.apache.myfaces.spi.FacesConfigResourceProviderFactory	org.apache.myfaces.spi.impl.DefaultFacesConfigResourceProviderFactory@17a04f27
+org.apache.myfaces.spi.FacesConfigResourceProvider.LIST	[]
+javax.faces.validator.beanValidator.ValidatorFactory	org.hibernate.validator.internal.engine.ValidatorFactoryImpl@c088148
+com.ibm.websphere.servlet.application.host	SMF WebContainer
+org.apache.myfaces.webapp.ManagedBeanDestroyerListener	org.apache.myfaces.webapp.ManagedBeanDestroyerListener@86524951
+com.ibm.ws.jsp.servletContextListeners.contextInitialized	true
+com.ibm.websphere.servlet.application.classpath	com.ibm.ws.classloading.internal.ThreadContextClassLoader@eb025e3f
+javax.servlet.context.orderedLibs	[WsaEJBDeployUtility.jar]
+com.ibm.websphere.servlet.application.name	Default Web Application
+org.apache.myfaces.spi.ServiceProviderFinder	org.apache.myfaces.spi.impl.DefaultServiceProviderFinder@173c779d
+com.ibm.ws.webcontainer.config.WelcomeFileList	[index.html]
+com.ibm.ws.cdi.cdiEnabledApp	false
+com.ibm.websphere.servlet.event.ServletContextEventSource	com.ibm.ws.webcontainer.webapp.WebAppEventSource@3bba930e
+javax.websocket.server.ServerContainer	com.ibm.ws.wsoc.external.ServerContainerExt@a8dce94a
+com.ibm.websphere.servlet.enterprise.application.name	DefaultApplication
+
+
